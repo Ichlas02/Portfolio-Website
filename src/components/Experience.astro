@@ -1,0 +1,178 @@
+---
+import Hero from "../components/Hero.astro";
+---
+<div class="stack gap-20">
+  <header class="wrapper hero">
+    <Hero align="center" title="Past Experience" tagline="My Profesional Track Record" />
+    <!-- <img
+      alt="illustration of profile page"
+      src="/assets/illustrations/about.svg"
+    /> -->
+  </header>
+
+  <main class="wrapper about">
+    <section>
+      <div class="section-title"><b>Dec 2023 - Feb 2024</b></div>
+      <div class="content">
+        <p>
+          <span style="font-size:24px;">
+            <b>Technical Consultant: Data & Analytics</b><br>
+          </span>
+          <span style="font-size:20px; font-style:italic; opacity: 80%;">Ernst & Young 
+            <span style="color:grey"> - Jakarta, Indonesia</span>
+          </span><br>
+          <span style="font-size:18px; opacity: 60%;">
+            One of the largest professional services networks in the world that operates 
+            as a network of member firms which are structured as separate legal entities in a partnership
+          </span>
+        </p>
+        <p>
+          Handled one of the biggest multinational automotive company in Southeast Asia as a PMO,
+          managing 4 different workstreams with 20+ sub-workstreams and 80+ EY workers from Indonesia,
+          India, and Singapore:<br>
+        </p>    
+        <ul class="tab-space" style="list-style-type:circle;">
+          <li>
+            Managed project governance tools, drafted MoMs for workstream meetings, oversaw project
+            infrastructures, developed slide decks for key meetings including steering committees, and
+            assisted in preparing FSD & TSD documents.
+          </li>
+          <li>
+            Established and maintained project governance structures using Notion, encompassing meetings,
+            risks, actions, and timelines across all workstreams for 20+ Deliverables over a 6-month period.
+          </li>
+        </ul>         
+      </div>
+    </section>
+    <section>
+      <div class="section-title"><b>Sep 2023 - Dec 2023</b></div>
+      <div class="content">
+        <p>
+          <span style="font-size:24px;">
+            <b>Information System Intern</b><br>
+          </span>
+          <span style="font-size:20px; font-style:italic; opacity: 80%;">PT Nusantara Regas 
+            <span style="color:grey"> - Jakarta, Indonesia</span>
+          </span><br>
+          <span style="font-size:18px; opacity: 60%;">
+            A subsidiary of Pertamina Gas Negara that does business in the storage and regasification of liquefied natural gas over the sea.
+          </span>
+        </p>
+        <ul class="tab-space" style="list-style-type:circle;">
+          <li>
+            Developed internal websites with Laravel and .NET framework.
+          </li>
+          <li>
+            Developed an API endpoint to sync data from NR intranet to Pertamina intranet with .NET.
+          </li>
+          <li>
+            Debugged and developed new features for internal websites based on user specifications.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="section-title"><b>Feb 2023 - Jul 2023</b></div>
+      <div class="content">
+        <p>
+          <span style="font-size:24px;">
+            <b>Machine Learning Cohort</b><br>
+          </span>
+          <span style="font-size:20px; font-style:italic; opacity: 80%;">Bangkit Academy 2023 by Google, GoTo, and Traveloka 
+            <span style="color:grey"> - Bandung, Indonesia</span>
+          </span><br>
+          <span style="font-size:18px; opacity: 60%;">
+            A career readiness program initiated by Google, GoTo, Tokopedia, and Traveloka, with the aim of shaping high-quality technical talent in Indonesia. This program offers a variety of learning paths, including Machine Learning, Cloud Computing, and Android Developer path.
+          </span>
+        </p>
+        <ul class="tab-space" style="list-style-type:circle;">
+          <li>
+            Learned the basics of data analytics, machine learning, and deep learning.
+          </li>
+          <li>
+            Learned soft skills like growth mindset, critical thinking, time management, and english for business with native speaker.
+          </li>
+          <li>
+            Earned the TensorFlow Developer Certificate, covering foundational & practical machine learning skills using TensorFlow.
+          </li>
+          <li>
+            Achieved an average score of 88.2/100 from 10 main course subjects including capstone project.
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
+
+<style lang="scss">
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // padding-inline: 2.5rem;
+    gap: 1.5rem;
+
+    img {
+      width: 100%;
+      max-width: 22rem;
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-0);
+
+    .link {
+      justify-self: center;
+      align-self: center;
+      grid-column: 1 / -1;
+    }
+  }
+
+  .section-title {
+    justify-content: right;
+    grid-column-start: 1;
+    font-size: var(--text-lg);
+    color: var(--gray-300);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+    text-align: justify;
+
+    p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (min-width: 50em) {
+    .hero {
+      flex-direction: row;
+      gap: 6rem;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 0.5fr 40% 1fr;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+
+    .tab-space {  
+      display: inline-block;  
+      margin-left: 24px;  
+  }  
+  }
+</style>

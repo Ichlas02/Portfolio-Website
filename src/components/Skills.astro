@@ -1,0 +1,79 @@
+---
+import Icon from "./ui/Icon/Icon.astro";
+---
+
+<section class="box skills">
+  <div class="stack gap-2 lg:gap-4">
+    <Icon
+      icon="terminal-window"
+      color="var(--accent-regular)"
+      size="2.5rem"
+      gradient
+    />
+    <h2>Data Analytics</h2>
+    <p>
+      Transform raw data into actionable insights with expertise in data exploration, visualization, and statistical analysis. I provide comprehensive solutions to help you make informed, data-driven decisions..
+    </p>
+  </div>
+  <div class="stack gap-2 lg:gap-4">
+    <Icon icon="layout" color="var(--accent-regular)" size="2.5rem" gradient />
+    <h2>Machine Learning</h2>
+    <p>
+      Build intelligent systems that adapt and learn from data. From predictive modeling to classification and clustering, I design and implement cutting-edge machine learning solutions tailored to your needs.
+    </p>
+  </div>
+  <div class="stack gap-2 lg:gap-4">
+    <Icon
+      icon="performance"
+      color="var(--accent-regular)"
+      size="2.5rem"
+      gradient
+    />
+    <h2>Deep Learning</h2>
+    <p>
+      Harness the power of advanced neural networks for complex problem-solving. Whether it’s image recognition, natural language processing, or sequence prediction, I deliver state-of-the-art deep learning solutions for impactful results.
+    </p>
+  </div>
+</section>
+
+<style>
+  .box {
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .skills h2 {
+    font-size: var(--text-lg);
+  }
+
+  .skills p {
+    color: var(--gray-300);
+    max-width: 35rem;
+  }
+
+  @media (min-width: 60em) {
+    .box {
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem;
+    }
+
+    .skills h2 {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>

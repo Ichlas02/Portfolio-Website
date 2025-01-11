@@ -1,0 +1,50 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import '@/styles/globals.css'
+
+// Component Imports]
+import About from "../components/About.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import Home from "@/components/Home.astro";
+import Contact from "@/components/Contact.astro";
+---
+<BaseLayout>
+  <!-- Sections -->
+  <section id="home">
+    <Home />
+  </section>
+
+  <section id="about">
+    <About />
+  </section>
+
+  <section id="experience">
+    <Experience />
+  </section>
+
+  <section id="projects">
+    <Projects />
+  </section>
+
+  <section id="contact">
+    <Contact />
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  body {
+    scroll-behavior: smooth;
+  }
+
+  section {
+      padding: 5rem 2rem;
+      min-height: 50vh;
+  }
+  .tab-space {  
+      display: inline-block;  
+      margin-left: 24px;  
+  }  
+
+</style>

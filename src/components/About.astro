@@ -1,0 +1,167 @@
+---
+import Hero from "../components/Hero.astro";
+---
+
+<div class="stack gap-20">
+  <header class="wrapper hero">
+    <Hero align="center" title="About Me" />
+    <main class="about">
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            Hi there! I'm Ichlas, a fresh graduate in computer science
+            who have good interpersonal skills, an excellent team worker, and
+            very willing to learn and develop new skills. I am reliable and
+            dependable and often seek new responsibilities within a wide range
+            of employment areas. I have an active and dynamic approach to work
+            and getting things done efficiently and precisely.
+          </p>
+          <p>
+            I am interested in all fields related to data, especially data
+            analysis, data science, and machine learning.
+            Besides programming, I'm also super enthusiastic about open-source
+            projects. I enjoy contributing to them because it allows me to give
+            back to the community, work with like-minded folks, and improve my
+            skills. Outside of the tech world, I have a hobby in photography. I
+            love capturing the beauty of the world through my lens and
+            preserving those special moments.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <p>
+            <b>Sepuluh Nopember Institute of Technology</b> <span style="color:grey"> - Surabaya, Indonesia</span> <span style="float:right;">2020 - 2024</span><br>
+            <span style="font-size:18px; font-style:italic;">Bachelor Degree in Computer Science</span>
+          </p>
+          <p>
+            <b>SMAN 70 Jakarta</b> <span style="color:grey"> - Jakarta, Indonesia</span> <span style="float:right;">2017 - 2020</span><br>
+            <span style="font-size:18px; font-style:italic;">Science Major</span>
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <div class="icon">
+            <img
+              style="width: 50px; height: 50px;"
+              src="/assets/skills/python.png"
+            />
+            <img
+            style="width: 50px; height: 50px;"
+            src="/assets/skills/tensorflow.png"
+            />
+            <img
+              style="width: 50px; height: 50px;"
+              src="/assets/skills/colab.png"
+            />
+            <img
+              style="width: 50px; height: 50px;"
+              src="/assets/skills/javascript.png"
+            />
+            <img
+              style="width: 55px; height: 55px;"
+              src="/assets/skills/astro.png"
+            />
+            <img
+              style="width: 50px; height: 50px;"
+              src="/assets/skills/laravel.png"
+            />
+            <img
+              style="width: 80px; height: 50px;"
+              src="/assets/skills/mysql.png"
+            />
+            <img
+              style="width: 50px; height: 50px;"
+              src="/assets/skills/office.png"
+            />
+            <img
+            style="width: 60px; height: 60px;"
+            src="/assets/skills/notion.png"
+            />
+            <img
+            style="width: 50px; height: 50px;"
+            src="/assets/skills/tableau.png"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </header>
+</div>
+
+<style lang="scss">
+  .hero {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .icon {
+    align-items: center;
+    justify-content:space-between;
+    display: flex;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+
+    .link {
+      justify-self: center;
+      align-self: center;
+      grid-column: 1 / -1;
+    }
+  }
+
+  .section-title {
+    text-align: center;
+    grid-column: 1 / 4;
+    grid-column-start: 1;
+    font-size: xx-large;
+    color: var(--gray-0);
+  }
+
+  .content {
+    text-align: justify;
+    grid-column: 1 / 4;
+
+    p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (min-width: 70em) {
+    .hero {
+      flex-direction: row;
+      gap: 6rem;
+    }
+
+    .icon {
+      flex-direction: row;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
