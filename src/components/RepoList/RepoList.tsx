@@ -24,7 +24,7 @@ export default function RepoList() {
     const fetchRepos = async () => {
       try {
         const response = await fetch(
-          "https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/?username=Ichlas02"
+          "https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/?username=ichlasulhsnt"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
