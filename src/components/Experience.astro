@@ -12,11 +12,20 @@ import Hero from "../components/Hero.astro";
 
   <main class="wrapper about">
     <section>
-      <div class="section-title"><b>Dec 2023 - Feb 2024</b></div>
+      <div class="section-title">
+        <a href="https://www.ey.com/en_id" class="rounded-image"> 
+          <img
+            
+            alt="ey logo"
+            style="margin-top: 5px; padding: 30px; border-radius: 0rem;"
+            src="/assets/experience/ey.png"
+          />
+        </a>
+      </div>
       <div class="content">
         <p>
           <span style="font-size:24px;">
-            <b>Technical Consultant: Data & Analytics</b><br>
+            <b>Technical Consultant: Data & Analytics</b> <span style="float:right;">Dec 2023 - Feb 2024</span><br>
           </span>
           <span style="font-size:20px; font-style:italic; opacity: 80%;">Ernst & Young 
             <span style="color:grey"> - Jakarta, Indonesia</span>
@@ -45,11 +54,19 @@ import Hero from "../components/Hero.astro";
       </div>
     </section>
     <section>
-      <div class="section-title"><b>Sep 2023 - Dec 2023</b></div>
+      <div class="section-title">
+        <a href="https://nusantararegas.com/">
+          <img
+            class="rounded-image"
+            alt="nr logo"
+            src="/assets/experience/nr.png"
+          />
+        </a>
+      </div>
       <div class="content">
         <p>
           <span style="font-size:24px;">
-            <b>Information System Intern</b><br>
+            <b>Information System Intern</b> <span style="float:right;">Sep 2023 - Dec 2023</span><br>
           </span>
           <span style="font-size:20px; font-style:italic; opacity: 80%;">PT Nusantara Regas 
             <span style="color:grey"> - Jakarta, Indonesia</span>
@@ -72,11 +89,20 @@ import Hero from "../components/Hero.astro";
       </div>
     </section>
     <section>
-      <div class="section-title"><b>Feb 2023 - Jul 2023</b></div>
+      <div class="section-title">
+        <a href="https://grow.google/intl/id_id/bangkit/?tab=machine-learning">
+          <img
+            class="rounded-image"
+            alt="bangkit logo"
+            style="padding: 10px"
+            src="/assets/experience/bangkit.png"
+          />
+        </a>
+      </div>
       <div class="content">
         <p>
           <span style="font-size:24px;">
-            <b>Machine Learning Cohort</b><br>
+            <b>Machine Learning Cohort</b> <span style="float:right;">Feb 2023 - Jul 2023</span> <br>
           </span>
           <span style="font-size:20px; font-style:italic; opacity: 80%;">Bangkit Academy 2023 by Google, GoTo, and Traveloka 
             <span style="color:grey"> - Bandung, Indonesia</span>
@@ -125,6 +151,30 @@ import Hero from "../components/Hero.astro";
     gap: 3.5rem;
   }
 
+  .rounded-image {
+      object-fit: contain; /* Ensure the image fits within the dimensions */
+      // border-radius: 30%; /* Make the corners fully round */
+      margin-top: 15px; /* Add spacing above the image */
+      width: 200px;
+      height: 200px;
+      // background-color: #fff;
+
+      display: block;
+      text-decoration: none;
+      background: var(--gradient-subtle);
+      border: 2.5px solid var(--accent-regular);
+      box-shadow: var(--shadow-sm);
+      border-radius: 3rem;
+      transition: var(--theme-transition);
+
+      &:hover {
+        box-shadow: var(--shadow-md);
+        border: 2.5px solid var(--accent-dark);
+        filter: brightness(1.1);
+        transform: translateY(-0.5rem);
+      }
+  }
+
   section {
     display: flex;
     flex-direction: column;
@@ -139,10 +189,11 @@ import Hero from "../components/Hero.astro";
   }
 
   .section-title {
-    justify-content: right;
-    grid-column-start: 1;
-    font-size: var(--text-lg);
-    color: var(--gray-300);
+    text-align: center; /* Center-align the text and image */
+    display: flex; /* Enables flexbox for better layout control */
+    flex-direction: column; /* Stacks text and image vertically */
+    align-items: center; /* Centers items horizontally */
+    gap: 1rem; /* Adds spacing between the text and image */
   }
 
   .content {
