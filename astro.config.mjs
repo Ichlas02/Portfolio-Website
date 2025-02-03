@@ -15,6 +15,6 @@ export default defineConfig({
     })
     
   ],
-  site: 'https://astronaut.github.io',
-  base: 'my-repo',
+  site: 'https://ichlasulhsnt.github.io',
+  // base: 'my-repo',
 });
